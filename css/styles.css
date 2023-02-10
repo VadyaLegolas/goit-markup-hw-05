@@ -139,12 +139,9 @@ body {
   height: 30px;
 }
 
-.close-button:hover {
-  background-color: var(--accent-button-color);
-}
-
-.close-button:hover .icon-close-modal {
-  fill: #ffffff;
+.close-button:hover .icon-close-modal,
+.close-button:focus .icon-close-modal {
+  fill: var(--accent-color);
 }
 
 /* === END COMPONENTS === */
