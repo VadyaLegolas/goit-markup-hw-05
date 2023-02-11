@@ -14,7 +14,7 @@
   --accent-button-color: #188ce8;
 
   --animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  --animation-duration: 250ms;
+  --animation-duration: 2000ms;
 }
 
 h1,
@@ -679,41 +679,28 @@ body {
   overflow: hidden;
 }
 
-.projects-thumb::before {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(33, 150, 243, 0.9);
-  transform: translateY(100%);
-  transition: transform var(--animation-duration)
-    var(--animation-timing-function);
-}
-
-.projects-card-link:hover .projects-thumb::before,
-.projects-card-link:focus .projects-thumb::before,
-.projects-card-link:hover .thumb-paragraph,
-.projects-card-link:focus .thumb-paragraph {
-  transform: translateY(0);
-}
-
 .thumb-paragraph {
   position: absolute;
-  width: 322px;
-  top: 63px;
-  left: 24px;
+  background-color: rgba(33, 150, 243, 0.9);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 63px 24px;
 
   font-weight: 400;
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
   color: #ffffff;
-  transform: translateY(150%);
+  transform: translateY(100%);
   transition: transform var(--animation-duration)
     var(--animation-timing-function);
+}
+
+.projects-card-link:hover .thumb-paragraph,
+.projects-card-link:focus .thumb-paragraph {
+  transform: translateY(0);
 }
 
 /* === END PROJECTS === */
