@@ -108,14 +108,14 @@ body {
   opacity: 1;
   visibility: visible;
 
-  transition: opacity var(--animation-duration) var(--animation-timing-function), visibility var(--animation-duration) var(--animation-timing-function);
+  transition: opacity var(--animation-duration) var(--animation-timing-function),
+    visibility var(--animation-duration) var(--animation-timing-function);
 }
 
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
-  
 }
 
 .backdrop.is-hidden .modal {
@@ -503,14 +503,10 @@ body {
 
 .clients-list-item {
   flex-basis: calc((100% - 180px) / 6);
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
-
-  transition: border var(--animation-duration) var(--animation-timing-function);
 }
 
-.clients-list-item:hover,
-.clients-list-item:focus {
+.clients-list-link:hover,
+.clients-list-link:focus {
   border: 1px solid var(--accent-color);
 }
 
@@ -520,6 +516,10 @@ body {
   justify-content: center;
   flex-basis: 170px;
   height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+
+  transition: border var(--animation-duration) var(--animation-timing-function);
 }
 
 .clients-logo-icons {
